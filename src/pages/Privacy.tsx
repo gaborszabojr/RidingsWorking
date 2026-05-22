@@ -40,7 +40,7 @@ export default function Privacy() {
               Ridings Landscape & Excavation (“Company,” “we,” “our,” or “us”) respects your privacy and is committed to protecting it through this Privacy Policy.
             </p>
             <p>
-              This policy describes how we collect, use, and share information when you visit our website: <a href="https://ridingslandscapeandexcavation.com" target="_blank" rel="noopener noreferrer" className="text-brand-orange hover:underline">https://ridingslandscapeandexcavation.com</a>
+              This policy describes how we collect, use, and share information when you visit our website: <a href="https://ridingslandscaping.com" target="_blank" rel="noopener noreferrer" className="text-brand-orange hover:underline">ridingslandscaping.com</a>
             </p>
           </section>
 
@@ -204,9 +204,9 @@ export default function Privacy() {
                 Ridings Landscape & Excavation
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="mailto:chaseridingslandscaping865@gmail.com" className="flex items-center gap-3 text-brand-silver hover:text-brand-orange transition-colors">
+                <a href="mailto:cridings05@gmail.com" className="flex items-center gap-3 text-brand-silver hover:text-brand-orange transition-colors">
                   <Mail size={16} className="text-brand-orange" />
-                  <span>chaseridingslandscaping865@gmail.com</span>
+                  <span>cridings05@gmail.com</span>
                 </a>
                 <a href="tel:8653244107" className="flex items-center gap-3 text-brand-silver hover:text-brand-orange transition-colors">
                   <Phone size={16} className="text-brand-orange" />

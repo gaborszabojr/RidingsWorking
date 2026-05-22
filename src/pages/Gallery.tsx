@@ -1,9 +1,21 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ArrowLeft, Maximize2, Filter } from 'lucide-react';
+import { X, ArrowLeft, Maximize2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GALLERY_IMAGES = [
+  // New Transformation Project
+  {
+    url: "/images/bf1.jpg",
+    category: "Hardscaping",
+    title: "Project Transformation - Before"
+  },
+  {
+    url: "/images/aft1.jpg",
+    category: "Hardscaping",
+    title: "Project Transformation - After"
+  },
+
   // Custom Stone Deck sequence
   {
     url: "/images/IMG_2930.jpg",
@@ -18,32 +30,22 @@ const GALLERY_IMAGES = [
   {
     url: "/images/hardscape.jpg",
     category: "Hardscaping",
-    title: "Custom Raised Bed Patio"
+    title: "Pavers Integration"
   },
 
   // Precision Transformation sequence
   {
     url: "/images/IMG_2924.jpg",
     category: "Hardscaping",
-    title: "Site Preparation Base"
+    title: "Residential Landscaping"
   },
   {
     url: "/images/IMG_2926.jpg",
     category: "Hardscaping",
-    title: "Finished Patio Masonry"
+    title: "Finished Walkway/Pavers"
   },
 
-  // Land Clearing Projects sequence
-  {
-    url: "/images/rl3.jpg",
-    category: "Land Clearing/ Excavation",
-    title: "Land Clearing Projects I"
-  },
-  {
-    url: "/images/rl4.jpg",
-    category: "Landscaping",
-    title: "Land Clearing Projects II"
-  },
+
 
   // Residential Landscaping sequence
   {
@@ -113,16 +115,8 @@ const GALLERY_IMAGES = [
     category: "Hardscaping",
     title: "Raised Paver Deck"
   },
-  {
-    url: "/images/rl5.jpg",
-    category: "Hardscaping",
-    title: "Flagstone Patio Oak Ridge"
-  },
-  {
-    url: "/images/rl6.jpg",
-    category: "Land Clearing/ Excavation",
-    title: "Walkway & Pavers"
-  },
+
+
   {
     url: "/images/rl7.jpg",
     category: "Land Clearing/ Excavation",
@@ -138,11 +132,7 @@ const GALLERY_IMAGES = [
     category: "Hardscaping",
     title: "Hardscape Deck Design"
   },
-  {
-    url: "/images/deckimage.jpg",
-    category: "Hardscaping",
-    title: "Exterior Living Space"
-  },
+
   {
     url: "/images/rpool.jpg",
     category: "Land Clearing/ Excavation",
@@ -153,36 +143,9 @@ const GALLERY_IMAGES = [
     category: "Landscaping",
     title: "Commercial Landscaping"
   },
-  {
-    url: "/images/rl7.jpg",
-    category: "Landscaping",
-    title: "Pavers Integration"
-  },
-  {
-    url: "/images/rl8.jpg",
-    category: "Landscaping",
-    title: "Retaining Walls"
-  },
-  {
-    url: "/images/IMG_2251.jpg",
-    category: "Landscaping",
-    title: "Grading & Landscaping Case Study"
-  },
-  {
-    url: "/images/IMG_2251.jpg",
-    category: "Hardscaping",
-    title: "Hardscaping Block Detail"
-  },
-  {
-    url: "/images/IMG_2924.jpg",
-    category: "Hardscaping",
-    title: "Project Transformation Base"
-  },
-  {
-    url: "/images/IMG_2926.jpg",
-    category: "Hardscaping",
-    title: "Outdoor Living Space Masonry"
-  },
+
+
+
   {
     url: "/images/landclearing_fire_photo.jpg",
     category: "Land Clearing/ Excavation",
@@ -238,7 +201,6 @@ export default function Gallery() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <div className="space-y-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-brand-orange text-[10px] font-black uppercase tracking-widest">{img.category}</span>
                     <h3 className="text-white font-display font-black italic text-lg leading-tight uppercase">{img.title}</h3>
                     <div className="flex items-center gap-2 text-brand-silver/60 text-[10px] font-bold uppercase tracking-tighter pt-2">
                       <Maximize2 size={12} /> Click To Expand

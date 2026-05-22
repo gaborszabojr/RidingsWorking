@@ -241,9 +241,9 @@ function Home() {
           <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <img 
-                src="/images/ridingslandscapinglogo.jpg" 
+                src="/images/ridingslandscapinglogo_transparent.png" 
                 alt="Ridings Landscaping & Excavation Logo" 
-                className="h-12 w-auto md:h-16"
+                className="h-12 w-auto md:h-16 object-contain transition-transform hover:scale-105 duration-200"
                 referrerPolicy="no-referrer"
               />
               <div className="hidden sm:flex flex-col">
@@ -537,8 +537,8 @@ function Home() {
               <BeforeAfterSlider 
                 slides={[
                   {
-                    beforeImage: "/images/IMG_2924.jpg",
-                    afterImage: "/images/IMG_2926.jpg",
+                    beforeImage: "/images/bf1.jpg",
+                    afterImage: "/images/aft1.jpg",
                     title: "Hardscaping & Patio Transformation"
                   },
                   {
@@ -656,14 +656,14 @@ function Home() {
       {/* Contact Section */}
       <section id="contact" className="section-padding bg-brand-silver">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <div className="space-y-6 flex flex-col justify-between">
+          <div className="flex flex-col justify-center">
             <div>
               <h2 className="text-brand-red text-lg mb-2">NOW BOOKING.</h2>
               <h2 className="text-5xl md:text-7xl leading-none">START YOUR <br />PROJECT.</h2>
+              <p className="text-brand-metal text-lg max-w-md hidden lg:block mt-4">
+                This is where your project starts. Reach out using our direct contact channels or message us below to claim your schedule slot.
+              </p>
             </div>
-            <p className="text-brand-metal text-lg max-w-md hidden lg:block">
-              We look forward to transforming your property. Reach out through our CRM system or contact us directly.
-            </p>
           </div>
 
           <div className="space-y-4">
@@ -726,9 +726,9 @@ function Home() {
           <div className="space-y-6 max-w-sm">
             <div className="flex items-center gap-4">
               <img 
-                src="/images/ridingslandscapinglogo.jpg" 
+                src="/images/ridingslandscapinglogo_transparent.png" 
                 alt="Ridings Landscaping & Excavation Logo" 
-                className="h-16 w-auto"
+                className="h-16 w-auto object-contain transition-transform hover:scale-105 duration-200"
                 referrerPolicy="no-referrer"
               />
               <div className="flex flex-col">
@@ -820,9 +820,9 @@ function TestimonialsPage() {
           <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <Link to="/" className="flex items-center gap-4 group">
               <img 
-                src="/images/ridingslandscapinglogo.jpg" 
+                src="/images/ridingslandscapinglogo_transparent.png" 
                 alt="Logo" 
-                className="h-12 w-auto"
+                className="h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
               <div className="flex flex-col">
@@ -893,8 +893,8 @@ function TestimonialsPage() {
       <footer className="bg-brand-black py-16 text-white border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12 text-center md:text-left">
           <div className="mx-auto md:mx-0">
-            <Link to="/" className="flex items-center gap-4 justify-center md:justify-start">
-              <img src="/images/ridingslandscapinglogo.jpg" className="h-12 w-auto" alt="Logo" referrerPolicy="no-referrer" />
+            <Link to="/" className="flex items-center gap-4 justify-center md:justify-start group">
+              <img src="/images/ridingslandscapinglogo_transparent.png" className="h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105" alt="Logo" referrerPolicy="no-referrer" />
               <div className="flex flex-col">
                 <span className="text-xl font-display font-black italic tracking-tighter leading-none text-chrome">RIDINGS</span>
                 <span className="text-[8px] font-black uppercase tracking-[0.3em] opacity-80">Landscaping & Excavation LLC</span>
