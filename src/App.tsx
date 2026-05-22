@@ -40,41 +40,41 @@ const SERVICES = [
     title: "Land Clearing/ Excavation",
     description: "Precision site preparation, trenching, complex earthmoving, efficient vegetation removal, tree & stump removal, and professional drainage solutions.",
     icon: <Truck className="w-6 h-6" />,
-    image: "/Public/Jpg images Fixed/landclearing_fire_photo.jpg"
+    image: "/images/landclearing_fire_photo.jpg"
   },
   {
     title: "Landscaping",
     description: "Professional design and estate transformations. We handle everything from planting to Rock/Mulch/Soil Delivery.",
     icon: <Hammer className="w-6 h-6" />,
-    image: "/Public/Jpg images Fixed/rl1.jpg"
+    image: "/images/rl1.jpg"
   },
   {
     title: "Hardscaping",
     description: "Expert installation of Patios, Paver patios, Flagstone patios, Pavers, Retaining walls, and custom stone features.",
     icon: <Gear className="w-6 h-6" />,
-    image: "/Public/Jpg images Fixed/rl8.jpg"
+    image: "/images/rl8.jpg"
   },
   {
     title: "Construction and remodel",
     description: "High-quality structural builds, additions, remodels, custom decks, porches, screened-in areas, and fully integrated custom pools.",
     icon: <Construction className="w-6 h-6" />,
-    image: "/Public/Jpg images Fixed/rpool.jpg"
+    image: "/images/rpool.jpg"
   },
   {
     title: "Other Services",
     description: "Specialized solutions including Pools, Decks, Porches, Remodels, Additions, Screened-in areas, and Snow clearing.",
     icon: <Sparkles className="w-6 h-6" />,
-    image: "/Public/Jpg images Fixed/rl7.jpg"
+    image: "/images/rl7.jpg"
   }
 ];
 
 const PORTFOLIO = [
-  "/Public/Jpg images Fixed/rl6.jpg",
-  "/Public/Jpg images Fixed/rpool.jpg",
-  "/Public/Jpg images Fixed/IMG_2933.jpg",
-  "/Public/Jpg images Fixed/rl1.jpg",
-  "/Public/Jpg images Fixed/IMG_2930.jpg",
-  "/Public/Jpg images Fixed/deckimage.jpg",
+  "/images/rl6.jpg",
+  "/images/rpool.jpg",
+  "/images/IMG_2933.jpg",
+  "/images/rl1.jpg",
+  "/images/IMG_2930.jpg",
+  "/images/deckimage.jpg",
 ];
 
 const TESTIMONIALS = [
@@ -241,7 +241,7 @@ function Home() {
           <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div className="flex items-center gap-4">
               <img 
-                src="/Jpg images Fixed/ridingslandscapinglogo.jpg" 
+                src="/images/ridingslandscapinglogo.jpg" 
                 alt="Ridings Landscaping & Excavation Logo" 
                 className="h-12 w-auto md:h-16"
                 referrerPolicy="no-referrer"
@@ -537,13 +537,13 @@ function Home() {
               <BeforeAfterSlider 
                 slides={[
                   {
-                    beforeImage: "/before-after/Pics/IMG_2924.jpg",
-                    afterImage: "/before-after/Pics/IMG_2926.jpg",
+                    beforeImage: "/images/IMG_2924.jpg",
+                    afterImage: "/images/IMG_2926.jpg",
                     title: "Hardscaping & Patio Transformation"
                   },
                   {
-                    beforeImage: "/before-after/Pics/IMG_1945.jpg",
-                    afterImage: "/before-after/Pics/IMG_1963.jpg",
+                    beforeImage: "/images/IMG_1945.jpg",
+                    afterImage: "/images/IMG_1963.jpg",
                     title: "Land Clearing & Stump/Tree Removal"
                   }
                 ]}
@@ -726,7 +726,7 @@ function Home() {
           <div className="space-y-6 max-w-sm">
             <div className="flex items-center gap-4">
               <img 
-                src="/Jpg images Fixed/ridingslandscapinglogo.jpg" 
+                src="/images/ridingslandscapinglogo.jpg" 
                 alt="Ridings Landscaping & Excavation Logo" 
                 className="h-16 w-auto"
                 referrerPolicy="no-referrer"
@@ -820,7 +820,7 @@ function TestimonialsPage() {
           <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <Link to="/" className="flex items-center gap-4 group">
               <img 
-                src="/Jpg images Fixed/ridingslandscapinglogo.jpg" 
+                src="/images/ridingslandscapinglogo.jpg" 
                 alt="Logo" 
                 className="h-12 w-auto"
                 referrerPolicy="no-referrer"
@@ -894,7 +894,7 @@ function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12 text-center md:text-left">
           <div className="mx-auto md:mx-0">
             <Link to="/" className="flex items-center gap-4 justify-center md:justify-start">
-              <img src="/Jpg images Fixed/ridingslandscapinglogo.jpg" className="h-12 w-auto" alt="Logo" referrerPolicy="no-referrer" />
+              <img src="/images/ridingslandscapinglogo.jpg" className="h-12 w-auto" alt="Logo" referrerPolicy="no-referrer" />
               <div className="flex flex-col">
                 <span className="text-xl font-display font-black italic tracking-tighter leading-none text-chrome">RIDINGS</span>
                 <span className="text-[8px] font-black uppercase tracking-[0.3em] opacity-80">Landscaping & Excavation LLC</span>
