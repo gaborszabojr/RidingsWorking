@@ -40,41 +40,41 @@ const SERVICES = [
     title: "Land Clearing/ Excavation",
     description: "Precision site preparation, trenching, complex earthmoving, efficient vegetation removal, tree & stump removal, and professional drainage solutions.",
     icon: <Truck className="w-6 h-6" />,
-    image: "/before-after/Pics/landclearing_fire_photo.jpg"
+    image: "/Jpg images Fixed/landclearing_fire_photo.jpg"
   },
   {
     title: "Landscaping",
     description: "Professional design and estate transformations. We handle everything from planting to Rock/Mulch/Soil Delivery.",
     icon: <Hammer className="w-6 h-6" />,
-    image: "/before-after/Pics/rl1.jpg"
+    image: "/Jpg images Fixed/rl1.jpg"
   },
   {
     title: "Hardscaping",
     description: "Expert installation of Patios, Paver patios, Flagstone patios, Pavers, Retaining walls, and custom stone features.",
     icon: <Gear className="w-6 h-6" />,
-    image: "/before-after/Pics/rl8.jpg"
+    image: "/Jpg images Fixed/rl8.jpg"
   },
   {
     title: "Construction and remodel",
     description: "High-quality structural builds, additions, remodels, custom decks, porches, screened-in areas, and fully integrated custom pools.",
     icon: <Construction className="w-6 h-6" />,
-    image: "/before-after/Pics/rpool.jpg"
+    image: "/Jpg images Fixed/rpool.jpg"
   },
   {
     title: "Other Services",
     description: "Specialized solutions including Pools, Decks, Porches, Remodels, Additions, Screened-in areas, and Snow clearing.",
     icon: <Sparkles className="w-6 h-6" />,
-    image: "/before-after/Pics/rl7.jpg"
+    image: "/Jpg images Fixed/rl7.jpg"
   }
 ];
 
 const PORTFOLIO = [
   "/Jpg images Fixed/rl6.jpg",
-  "/before-after/Pics/rpool.jpg",
-  "/before-after/Pics/IMG_2933.jpg",
-  "/before-after/Pics/rl1.jpg",
-  "/before-after/Pics/IMG_2930.jpg",
-  "/before-after/Pics/deckimage.jpg",
+  "/Jpg images Fixed/rpool.jpg",
+  "/Jpg images Fixed/IMG_2933.jpg",
+  "/Jpg images Fixed/rl1.jpg",
+  "/Jpg images Fixed/IMG_2930.jpg",
+  "/Jpg images Fixed/deckimage.jpg",
 ];
 
 const TESTIMONIALS = [
@@ -537,13 +537,13 @@ function Home() {
               <BeforeAfterSlider 
                 slides={[
                   {
-                    beforeImage: "/before-after/Pics/IMG_2924.jpg",
-                    afterImage: "/before-after/Pics/IMG_2926.jpg",
+                    beforeImage: "/Jpg images Fixed/IMG_2924.jpg",
+                    afterImage: "/Jpg images Fixed/IMG_2926.jpg",
                     title: "Hardscaping & Patio Transformation"
                   },
                   {
-                    beforeImage: "/before-after/Pics/IMG_1945.jpg",
-                    afterImage: "/before-after/Pics/IMG_1963.jpg",
+                    beforeImage: "/Jpg images Fixed/IMG_1945.jpg",
+                    afterImage: "/Jpg images Fixed/IMG_1963.jpg",
                     title: "Land Clearing & Stump/Tree Removal"
                   }
                 ]}
