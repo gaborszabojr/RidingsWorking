@@ -6,185 +6,185 @@ import { Link } from 'react-router-dom';
 const GALLERY_IMAGES = [
   // Custom Stone Deck sequence
   {
-    url: "/before-after/Pics/IMG_2930.jpg",
+    url: "/Jpg images Fixed/IMG_2930.jpg",
     category: "Construction and remodel",
     title: "Custom Stone Deck I"
   },
   {
-    url: "/before-after/Pics/IMG_2928.jpg",
+    url: "/Jpg images Fixed/IMG_2928.jpg",
     category: "Hardscaping",
     title: "Custom Stone Deck II"
   },
   {
-    url: "/before-after/Pics/hardscape.jpg",
+    url: "/Jpg images Fixed/hardscape.jpg",
     category: "Hardscaping",
     title: "Custom Raised Bed Patio"
   },
 
   // Precision Transformation sequence
   {
-    url: "/before-after/Pics/IMG_2924.jpg",
+    url: "/Jpg images Fixed/IMG_2924.jpg",
     category: "Hardscaping",
     title: "Site Preparation Base"
   },
   {
-    url: "/before-after/Pics/IMG_2926.jpg",
+    url: "/Jpg images Fixed/IMG_2926.jpg",
     category: "Hardscaping",
     title: "Finished Patio Masonry"
   },
 
   // Land Clearing Projects sequence
   {
-    url: "/before-after/Pics/rl3.jpg",
+    url: "/Jpg images Fixed/rl3.jpg",
     category: "Land Clearing/ Excavation",
     title: "Land Clearing Projects I"
   },
   {
-    url: "/before-after/Pics/rl4.jpg",
+    url: "/Jpg images Fixed/rl4.jpg",
     category: "Landscaping",
     title: "Land Clearing Projects II"
   },
 
   // Residential Landscaping sequence
   {
-    url: "/before-after/Pics/rl1.jpg",
+    url: "/Jpg images Fixed/rl1.jpg",
     category: "Landscaping",
     title: "Residential Landscaping I"
   },
   {
-    url: "/before-after/Pics/rl2.jpg",
+    url: "/Jpg images Fixed/rl2.jpg",
     category: "Landscaping",
     title: "Residential Landscaping II"
   },
   {
-    url: "/before-after/Pics/IMG_2925.jpg",
+    url: "/Jpg images Fixed/IMG_2925.jpg",
     category: "Hardscaping",
     title: "Residential Landscaping III"
   },
   {
-    url: "/before-after/Pics/rl4.jpg",
+    url: "/Jpg images Fixed/rl4.jpg",
     category: "Landscaping",
     title: "Residential Landscaping IV"
   },
   {
-    url: "/before-after/Pics/rl5.jpg",
+    url: "/Jpg images Fixed/rl5.jpg",
     category: "Landscaping",
     title: "Residential Landscaping V"
   },
   {
-    url: "/before-after/Pics/rl6.jpg",
+    url: "/Jpg images Fixed/rl6.jpg",
     category: "Landscaping",
     title: "Residential Landscaping VI"
   },
   {
-    url: "/before-after/Pics/rl9.jpg",
+    url: "/Jpg images Fixed/rl9.jpg",
     category: "Landscaping",
     title: "Residential Landscaping IX"
   },
 
   // Other individual projects
   {
-    url: "/before-after/Pics/IMG_2927.jpg",
+    url: "/Jpg images Fixed/IMG_2927.jpg",
     category: "Hardscaping",
     title: "Paver Patio & Walkway"
   },
   {
-    url: "/before-after/Pics/IMG_2933.jpg",
+    url: "/Jpg images Fixed/IMG_2933.jpg",
     category: "Landscaping",
     title: "Walkway Installation"
   },
   {
-    url: "/before-after/Pics/IMG_1945.jpg",
+    url: "/Jpg images Fixed/IMG_1945.jpg",
     category: "Landscaping",
     title: "Land Clearing"
   },
   {
-    url: "/before-after/Pics/IMG_1960.jpg",
+    url: "/Jpg images Fixed/IMG_1960.jpg",
     category: "Land Clearing/ Excavation",
     title: "Dirt Work"
   },
   {
-    url: "/before-after/Pics/IMG_1963.jpg",
+    url: "/Jpg images Fixed/IMG_1963.jpg",
     category: "Land Clearing/ Excavation",
     title: "Stump & Tree Removal"
   },
   {
-    url: "/before-after/Pics/IMG_2885.jpg",
+    url: "/Jpg images Fixed/IMG_2885.jpg",
     category: "Hardscaping",
     title: "Raised Paver Deck"
   },
   {
-    url: "/before-after/Pics/rl5.jpg",
+    url: "/Jpg images Fixed/rl5.jpg",
     category: "Hardscaping",
     title: "Flagstone Patio Oak Ridge"
   },
   {
-    url: "/before-after/Pics/rl6.jpg",
+    url: "/Jpg images Fixed/rl6.jpg",
     category: "Land Clearing/ Excavation",
     title: "Walkway & Pavers"
   },
   {
-    url: "/before-after/Pics/rl7.jpg",
+    url: "/Jpg images Fixed/rl7.jpg",
     category: "Land Clearing/ Excavation",
     title: "Residential Landscaping/ Pavers"
   },
   {
-    url: "/before-after/Pics/deckimage.jpg",
+    url: "/Jpg images Fixed/deckimage.jpg",
     category: "Hardscaping",
     title: "Custom Deck Install"
   },
   {
-    url: "/before-after/Pics/rdeck2.jpg",
+    url: "/Jpg images Fixed/rdeck2.jpg",
     category: "Hardscaping",
     title: "Hardscape Deck Design"
   },
   {
-    url: "/before-after/Pics/deckimage.jpg",
+    url: "/Jpg images Fixed/deckimage.jpg",
     category: "Hardscaping",
     title: "Exterior Living Space"
   },
   {
-    url: "/before-after/Pics/rpool.jpg",
+    url: "/Jpg images Fixed/rpool.jpg",
     category: "Land Clearing/ Excavation",
     title: "Pool Site Excavation"
   },
   {
-    url: "/before-after/Pics/rl3.jpg",
+    url: "/Jpg images Fixed/rl3.jpg",
     category: "Landscaping",
     title: "Commercial Landscaping"
   },
   {
-    url: "/before-after/Pics/rl7.jpg",
+    url: "/Jpg images Fixed/rl7.jpg",
     category: "Landscaping",
     title: "Pavers Integration"
   },
   {
-    url: "/before-after/Pics/rl8.jpg",
+    url: "/Jpg images Fixed/rl8.jpg",
     category: "Landscaping",
     title: "Retaining Walls"
   },
   {
-    url: "/before-after/Pics/IMG_2251.jpg",
+    url: "/Jpg images Fixed/IMG_2251.jpg",
     category: "Landscaping",
     title: "Grading & Landscaping Case Study"
   },
   {
-    url: "/before-after/Pics/IMG_2251.jpg",
+    url: "/Jpg images Fixed/IMG_2251.jpg",
     category: "Hardscaping",
     title: "Hardscaping Block Detail"
   },
   {
-    url: "/before-after/Pics/IMG_2924.jpg",
+    url: "/Jpg images Fixed/IMG_2924.jpg",
     category: "Hardscaping",
     title: "Project Transformation Base"
   },
   {
-    url: "/before-after/Pics/IMG_2926.jpg",
+    url: "/Jpg images Fixed/IMG_2926.jpg",
     category: "Hardscaping",
     title: "Outdoor Living Space Masonry"
   },
   {
-    url: "/before-after/Pics/landclearing_fire_photo.jpg",
+    url: "/Jpg images Fixed/landclearing_fire_photo.jpg",
     category: "Land Clearing/ Excavation",
     title: "Commercial Site Clearing & Prep"
   }
