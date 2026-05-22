@@ -69,7 +69,7 @@ const SERVICES = [
 ];
 
 const PORTFOLIO = [
-  "/public/Jpg images Fixed/rl6.jpg",
+  "/Jpg images Fixed/rl6.jpg",
   "/before-after/Pics/rpool.jpg",
   "/before-after/Pics/IMG_2933.jpg",
   "/before-after/Pics/rl1.jpg",
