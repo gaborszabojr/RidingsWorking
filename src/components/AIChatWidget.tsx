@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageSquare, Send, X, Bot, User, Loader2 } from 'lucide-react';
-import { GoogleGenAI } from "@google/genai";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -9,18 +8,6 @@ interface Message {
   role: 'user' | 'model';
   content: string;
 }
-
-const SYSTEM_INSTRUCTION = `Your name is Gabe. You are a professional AI assistant for Ridings Landscaping & Excavation LLC. 
-Your communication style is direct, brief, and professional. 
-Provide answers that are concise and to the point. Do not use filler or excessive pleasantries.
-Your goal is to answer questions about their services: Land Clearing/ Excavation, Landscaping, Hardscaping (including Flagstone patios, Patios, Paver patios, Pavers, and Retaining walls), and Construction and remodel (such as additions, remodels, decks, porches, screened-in areas, and custom pools).
-The company is located in Maryville, TN, and serves the Knoxville, Maryville, Walland, Townsend, and Monroe County areas.
-They have over 26 years of experience and have completed 2,500+ projects.
-
-Key Directives:
-1. Be extremely brief and direct in all responses.
-2. For quotes/estimates, provide this request link directly: https://clienthub.getjobber.com/hubs/0b06c4b8-21ee-4ceb-97a0-d1f4a6c93426/public/requests/2398467/new
-3. If unsure, refer them to Ridings Landscaping & Excavation LLC at (865) 390-4963 or cridings05@gmail.com.`;
 
 export function AIChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,28 +28,25 @@ export function AIChatWidget() {
 
     const userMessage = input.trim();
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
+    const updatedMessages: Message[] = [...messages, { role: 'user', content: userMessage }];
+    setMessages(updatedMessages);
     setIsLoading(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
-      const chat = ai.chats.create({
-        model: "gemini-3-flash-preview",
-        config: {
-          systemInstruction: SYSTEM_INSTRUCTION,
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        // We could pass history here, but for simplicity we'll just handle it in memory
-        // and send the current context if needed.
-        // For a more robust app, you'd pass the full message history.
+        body: JSON.stringify({ messages: updatedMessages }),
       });
 
-      // Sending only the last message for simplicity in this implementation, 
-      // but Gemini sessions handle context automatically if we use sendMessage.
-      const response = await chat.sendMessage({ 
-        message: userMessage 
-      });
+      if (!response.ok) {
+        throw new Error('Server returned an error');
+      }
 
-      const aiText = response.text || "I'm sorry, I couldn't generate a response.";
+      const data = await response.json();
+      const aiText = data.text || "I'm sorry, I couldn't generate a response.";
       setMessages(prev => [...prev, { role: 'model', content: aiText }]);
     } catch (error) {
       console.error("Gemini API Error:", error);
@@ -89,7 +73,7 @@ export function AIChatWidget() {
                   <Bot size={18} className="text-brand-black" />
                 </div>
                 <div>
-                  <h3 className="text-white text-sm font-black italic uppercase">GABE</h3>
+                  <h3 className="text-white text-sm font-black italic uppercase">CALEB</h3>
                   <p className="text-[10px] text-brand-orange font-bold uppercase tracking-widest">online</p>
                 </div>
               </div>
