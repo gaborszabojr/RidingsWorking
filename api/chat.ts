@@ -15,28 +15,29 @@ Directives:
 function generateCalebFallback(userMessages: any[]): string {
   const fullConversation = userMessages.map((m: any) => m.content || "").join(" ").toLowerCase();
   const lastUserMsg = (userMessages.filter((m: any) => m.role === "user").pop()?.content || "").toLowerCase();
+  const hasGreeted = userMessages.some((m: any) => m.role === "model");
 
   // Look for name introductions like "I'm John", "My name is Sarah", "Name is Dave"
   const nameMatch = fullConversation.match(/(?:my name is|i'm|i am|this is)\s+([a-zA-Z]+)/i);
   const userName = nameMatch ? nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1) : "";
 
-  const greeting = userName 
-    ? `Hi ${userName}, Caleb here!` 
-    : "Hi! Caleb here from Ridings Landscaping & Excavation.";
+  const greeting = hasGreeted 
+    ? ""
+    : (userName ? `Hi ${userName}, Caleb here! ` : "Hi! Caleb here from Ridings Landscaping & Excavation. ");
 
   if (lastUserMsg.includes("quote") || lastUserMsg.includes("estimate") || lastUserMsg.includes("price") || lastUserMsg.includes("cost") || lastUserMsg.includes("book") || lastUserMsg.includes("schedule")) {
-    return `${greeting} You can request a free estimate directly here: https://clienthub.getjobber.com/hubs/0b06c4b8-21ee-4ceb-97a0-d1f4a6c93426/public/requests/2398467/new`;
+    return `${greeting}You can request a free estimate directly here: https://clienthub.getjobber.com/hubs/0b06c4b8-21ee-4ceb-97a0-d1f4a6c93426/public/requests/2398467/new`;
   }
 
   if (lastUserMsg.includes("contact") || lastUserMsg.includes("phone") || lastUserMsg.includes("email") || lastUserMsg.includes("call") || lastUserMsg.includes("reach") || lastUserMsg.includes("number")) {
-    return `${greeting} You can reach us at (865) 390-4963 or cridings05@gmail.com.`;
+    return `${greeting}You can reach us at (865) 390-4963 or cridings05@gmail.com.`;
   }
 
   if (lastUserMsg.includes("service") || lastUserMsg.includes("do you") || lastUserMsg.includes("excavat") || lastUserMsg.includes("landscap") || lastUserMsg.includes("patio") || lastUserMsg.includes("pool") || lastUserMsg.includes("wall") || lastUserMsg.includes("deck")) {
-    return `${greeting} Yes, we offer excavation, landscaping, hardscaping, and construction services. What project do you have in mind?`;
+    return `${greeting}Yes, we offer excavation, landscaping, hardscaping, and construction services. What project do you have in mind?`;
   }
 
-  return `${greeting} How can I help you today?`;
+  return `${greeting}How can I help you today?`;
 }
 
 export default async function handler(req: any, res: any) {
@@ -51,9 +52,7 @@ export default async function handler(req: any, res: any) {
     const apiKey = process.env.GEMINI_API_KEY?.trim();
     if (!apiKey || apiKey === "") {
       const fallbackAnswer = generateCalebFallback(userMessages);
-      return res.json({
-        text: `${fallbackAnswer}\n\n*(Note for site admin: GEMINI_API_KEY is not set in environment settings)*`
-      });
+      return res.json({ text: fallbackAnswer });
     }
 
     // Instantiate server-side Gemini client with active API key
@@ -91,39 +90,6 @@ export default async function handler(req: any, res: any) {
 
     const fallbackAnswer = generateCalebFallback(userMessages);
 
-    const isQuotaOrCredit = 
-      errorStatus === 429 ||
-      errorMessage.includes("429") ||
-      errorMessage.includes("prepayment credits") ||
-      errorMessage.includes("depleted") ||
-      errorMessage.includes("resource_exhausted") ||
-      errorMessage.includes("quota");
-
-    const isAuthOrKey =
-      errorStatus === 401 ||
-      errorStatus === 400 ||
-      errorMessage.includes("401") ||
-      errorMessage.includes("unauthenticated") ||
-      errorMessage.includes("api_key_invalid") ||
-      errorMessage.includes("api key expired") ||
-      errorMessage.includes("access_token") ||
-      errorMessage.includes("authentication credential") ||
-      errorMessage.includes("invalid_argument");
-
-    if (isQuotaOrCredit) {
-      return res.json({
-        text: `${fallbackAnswer}\n\n*(Note for site admin: Gemini API prepayment credits are depleted. You can manage project credits at https://ai.studio/projects)*`
-      });
-    }
-
-    if (isAuthOrKey) {
-      return res.json({
-        text: `${fallbackAnswer}\n\n*(Note for site admin: Gemini API key is missing, invalid, or expired. Update GEMINI_API_KEY in platform Settings)*`
-      });
-    }
-
-    return res.json({
-      text: fallbackAnswer
-    });
+    return res.json({ text: fallbackAnswer });
   }
 }
