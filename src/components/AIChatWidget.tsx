@@ -11,12 +11,24 @@ interface Message {
 
 export function AIChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>(() => {
+    try {
+      const saved = sessionStorage.getItem('caleb_chat_messages');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    try {
+      sessionStorage.setItem('caleb_chat_messages', JSON.stringify(messages));
+    } catch (e) {
+      console.warn('Could not save chat history to sessionStorage', e);
+    }
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
@@ -50,7 +62,11 @@ export function AIChatWidget() {
       setMessages(prev => [...prev, { role: 'model', content: aiText }]);
     } catch (error) {
       console.error("Gemini API Error:", error);
-      setMessages(prev => [...prev, { role: 'model', content: "Sorry, I'm having trouble connecting right now. Please try again or contact us directly." }]);
+      setMessages(prev => [...prev, { 
+        role: 'model', 
+        content: "Hi there! I had trouble routing your message. This usually means either the **GEMINI_API_KEY** is expired/missing in your **Settings**, or there was a temporary server glitch.\n\n" +
+                 "Please check the **Secrets/API Keys** section in your **Settings** to ensure a valid key is provided. If you still need help, feel free to contact us directly at **(865) 390-4963** or email **cridings05@gmail.com**!" 
+      }]);
     } finally {
       setIsLoading(false);
     }
@@ -96,7 +112,7 @@ export function AIChatWidget() {
                     <MessageSquare size={24} />
                   </div>
                   <p className="text-xs text-brand-metal italic font-medium px-6">
-                    "How can I help you with your project at Ridings Landscaping & Excavation LLC?"
+                    "Hi! I'm Caleb from Ridings Landscaping & Excavation. How can I help you with your project today?"
                   </p>
                 </div>
               )}
