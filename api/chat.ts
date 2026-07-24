@@ -39,7 +39,7 @@ function generateCalebFallback(userMessages: any[]): string {
   return `${greeting} How can I help you today?`;
 }
 
-export async function handler(req: any, res: any) {
+export default async function handler(req: any, res: any) {
   let userMessages: any[] = [];
   try {
     const { messages } = req.body;

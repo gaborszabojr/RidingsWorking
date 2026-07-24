@@ -1,7 +1,7 @@
 import express from "express";
 import path from "path";
 import { createServer as createViteServer } from "vite";
-import { handler as chatHandler } from "./api/chat";
+import chatHandler from "./api/chat";
 import dotenv from "dotenv";
 
 dotenv.config();
